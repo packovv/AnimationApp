@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        animationView.layer.cornerRadius = 15
+        runAnimationButton.layer.cornerRadius = 15
     }
 
     @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
