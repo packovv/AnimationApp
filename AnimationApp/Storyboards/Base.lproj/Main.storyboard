@@ -18,7 +18,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pxu-jC-arq">
                                 <rect key="frame" x="87" y="717" width="240" height="85"/>
-                                <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.77647058823529413" green="0.84705882352941175" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="Ztg-vx-JWL"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="lAe-oY-qG3"/>
@@ -42,7 +42,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.77647058823529413" green="0.84705882352941175" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="jl3-Pk-NyY" firstAttribute="centerY" secondItem="ra9-1o-r42" secondAttribute="centerY" id="0dg-wR-o7p"/>
                                     <constraint firstAttribute="width" constant="280" id="CFg-yB-lrl"/>
