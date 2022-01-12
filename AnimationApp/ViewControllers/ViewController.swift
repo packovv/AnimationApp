@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     private var animationStarted = false
     private var springStarted = false
-    private var counter = 0
+    private var counter: Int8 = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +79,7 @@ class ViewController: UIViewController {
         runSpringAnimationButton.layer.removeAllAnimations()
         
         var springAnimation: SpringAnimation
+        var springButtonTitle: SpringAnimation
         
         switch counter {
         case 0:
@@ -142,7 +143,24 @@ class ViewController: UIViewController {
                                 """
             print("anime 3")
         default:
-            print("ERROR: switch doesn't work correct")
+            print("ERROR: switch 1 doesn't work correct")
+        }
+        
+        switch counter {
+        case 0:
+            springButtonTitle = springAnimations[1]
+            runSpringAnimationButton.setTitle("Next is \(springButtonTitle.animation)", for: .normal)
+        case 1:
+            springButtonTitle = springAnimations[2]
+            runSpringAnimationButton.setTitle("Next is \(springButtonTitle.animation)", for: .normal)
+        case 2:
+            springButtonTitle = springAnimations[3]
+            runSpringAnimationButton.setTitle("Next is \(springButtonTitle.animation)", for: .normal)
+        case 3:
+            springButtonTitle = springAnimations[0]
+            runSpringAnimationButton.setTitle("Next is \(springButtonTitle.animation)", for: .normal)
+        default:
+            print("ERROR: switch 2 doesn't work correct")
         }
         
         if counter >= 3 {
