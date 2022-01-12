@@ -16,6 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WM-CC-Ek7" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="87" y="717" width="240" height="85"/>
+                                <color key="backgroundColor" red="0.77647058820000003" green="0.84705882349999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="5cH-f5-HvW"/>
+                                    <constraint firstAttribute="height" constant="85" id="zMi-SK-Kue"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Run Spring Animation">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="runSpringAnimationButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xKl-u1-p2N"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pxu-jC-arq">
                                 <rect key="frame" x="87" y="717" width="240" height="85"/>
                                 <color key="backgroundColor" red="0.77647058823529413" green="0.84705882352941175" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -32,6 +48,24 @@
                                     <action selector="runAnimationButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GMq-2Q-Kzn"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Yp-9S-hc9" customClass="SpringView" customModule="Spring">
+                                <rect key="frame" x="67" y="194" width="280" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spring Animation" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vS1-mr-ngU">
+                                        <rect key="frame" x="62.5" y="63" width="155" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.77810996769999996" green="0.84565222259999995" blue="0.9372045994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="vS1-mr-ngU" firstAttribute="centerY" secondItem="7Yp-9S-hc9" secondAttribute="centerY" id="4b1-E7-jIb"/>
+                                    <constraint firstItem="vS1-mr-ngU" firstAttribute="centerX" secondItem="7Yp-9S-hc9" secondAttribute="centerX" id="YLz-40-sVf"/>
+                                    <constraint firstAttribute="width" constant="280" id="mmX-xX-NmC"/>
+                                    <constraint firstAttribute="height" constant="150" id="r70-yU-kfD"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ra9-1o-r42">
                                 <rect key="frame" x="67" y="194" width="280" height="150"/>
                                 <subviews>
@@ -70,17 +104,24 @@
                         <constraints>
                             <constraint firstItem="ra9-1o-r42" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Gl-cW-N3A"/>
                             <constraint firstItem="Pxu-jC-arq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bbp-tm-CW8"/>
+                            <constraint firstItem="7Yp-9S-hc9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GsM-Ve-vWY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pxu-jC-arq" secondAttribute="bottom" constant="60" id="Gwv-Ki-C1z"/>
                             <constraint firstItem="ra9-1o-r42" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="QFt-AS-vqy"/>
+                            <constraint firstItem="7Yp-9S-hc9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="bZN-s9-AUY"/>
                             <constraint firstItem="41H-r6-b80" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cwb-z0-e9i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5WM-CC-Ek7" secondAttribute="bottom" constant="60" id="jFt-p2-ox0"/>
                             <constraint firstItem="41H-r6-b80" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="uTU-QE-xSO"/>
+                            <constraint firstItem="5WM-CC-Ek7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z4h-81-eiH"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="animationLabel" destination="jl3-Pk-NyY" id="qDz-dz-3F6"/>
                         <outlet property="animationView" destination="ra9-1o-r42" id="GRz-yr-zb3"/>
                         <outlet property="runAnimationButton" destination="Pxu-jC-arq" id="wbZ-R9-AVT"/>
+                        <outlet property="runSpringAnimationButton" destination="5WM-CC-Ek7" id="IKD-va-mx1"/>
                         <outlet property="segmentControl" destination="41H-r6-b80" id="p6s-Dy-OxG"/>
+                        <outlet property="springLabel" destination="vS1-mr-ngU" id="fuA-kN-K3M"/>
+                        <outlet property="springView" destination="7Yp-9S-hc9" id="cJw-SX-Puw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
