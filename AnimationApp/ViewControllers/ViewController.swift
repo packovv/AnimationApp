@@ -9,11 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var animationView: UIView!
+    @IBOutlet weak var runAnimationButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
+        
+    }
+    @IBAction func runAnimationButtonAction(_ sender: UIButton) {
+        
+    }
+    
 }
 
