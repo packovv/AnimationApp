@@ -56,7 +56,6 @@
 				A557B7EBE74764911599F6D7 /* Pods-AnimationApp.debug.xcconfig */,
 				CEA1D46515EC378B2424BEF7 /* Pods-AnimationApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +80,39 @@
 		84172D58278CA9F600265A5F /* AnimationApp */ = {
 			isa = PBXGroup;
 			children = (
-				84172D59278CA9F600265A5F /* AppDelegate.swift */,
-				84172D5B278CA9F600265A5F /* SceneDelegate.swift */,
-				84172D5D278CA9F600265A5F /* ViewController.swift */,
-				84172D5F278CA9F600265A5F /* Main.storyboard */,
+				849BCBA4278F139F000A0334 /* App */,
+				849BCBA3278F12CD000A0334 /* Storyboards */,
+				849BCBA5278F13BC000A0334 /* ViewControllers */,
 				84172D62278CA9F800265A5F /* Assets.xcassets */,
-				84172D64278CA9F800265A5F /* LaunchScreen.storyboard */,
 				84172D67278CA9F800265A5F /* Info.plist */,
 			);
 			path = AnimationApp;
+			sourceTree = "<group>";
+		};
+		849BCBA3278F12CD000A0334 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				84172D64278CA9F800265A5F /* LaunchScreen.storyboard */,
+				84172D5F278CA9F600265A5F /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		849BCBA4278F139F000A0334 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				84172D59278CA9F600265A5F /* AppDelegate.swift */,
+				84172D5B278CA9F600265A5F /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		849BCBA5278F13BC000A0334 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84172D5D278CA9F600265A5F /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
