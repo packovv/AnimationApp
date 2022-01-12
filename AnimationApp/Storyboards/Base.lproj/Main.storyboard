@@ -77,8 +77,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="animationLabel" destination="jl3-Pk-NyY" id="qDz-dz-3F6"/>
                         <outlet property="animationView" destination="ra9-1o-r42" id="GRz-yr-zb3"/>
                         <outlet property="runAnimationButton" destination="Pxu-jC-arq" id="wbZ-R9-AVT"/>
+                        <outlet property="segmentControl" destination="41H-r6-b80" id="p6s-Dy-OxG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
