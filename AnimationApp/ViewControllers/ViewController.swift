@@ -11,7 +11,6 @@ class ViewController: UIViewController {
     
     let springAnimations = SpringAnimation.getSpringAnimation()
     
-    
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var animationView: UIView!
     @IBOutlet weak var springView: SpringView!
@@ -22,7 +21,7 @@ class ViewController: UIViewController {
     
     private var animationStarted = false
     private var springStarted = false
-    private var counter: Int8 = 0
+    private var counter: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,100 +75,41 @@ class ViewController: UIViewController {
         sender.pulsate()
     }
     @IBAction func runSpringAnimationButtonAction(_ sender: SpringButton) {
+        let springAnimationNumber = springAnimations.count - 1
+        
         runSpringAnimationButton.layer.removeAllAnimations()
-        
-        var springAnimation: SpringAnimation
-        var springButtonTitle: SpringAnimation
-        
-        switch counter {
-        case 0:
-            springAnimation = springAnimations[0]
-            springView.animation = springAnimation.animation
-            springView.curve = springAnimation.curve
-            springView.force = springAnimation.force
-            springView.duration = springAnimation.duration
-            springView.delay = springAnimation.delay
-            springLabel.text =  """
-                                    animation: \(springAnimation.animation)
-                                    curve: \(springAnimation.curve)
-                                    force: \(springAnimation.force)
-                                    duracion: \(springAnimation.duration)
-                                    delay: \(springAnimation.delay)
-                                """
-            print("anime 0")
-        case 1:
-            springAnimation = springAnimations[1]
-            springView.animation = springAnimation.animation
-            springView.curve = springAnimation.curve
-            springView.force = springAnimation.force
-            springView.duration = springAnimation.duration
-            springView.delay = springAnimation.delay
-            springLabel.text =  """
-                                    animation: \(springAnimation.animation)
-                                    curve: \(springAnimation.curve)
-                                    force: \(springAnimation.force)
-                                    duracion: \(springAnimation.duration)
-                                    delay: \(springAnimation.delay)
-                                """
-            print("anime 1")
-        case 2:
-            springAnimation = springAnimations[2]
-            springView.animation = springAnimation.animation
-            springView.curve = springAnimation.curve
-            springView.force = springAnimation.force
-            springView.duration = springAnimation.duration
-            springView.delay = springAnimation.delay
-            springLabel.text =  """
-                                    animation: \(springAnimation.animation)
-                                    curve: \(springAnimation.curve)
-                                    force: \(springAnimation.force)
-                                    duracion: \(springAnimation.duration)
-                                    delay: \(springAnimation.delay)
-                                """
-            print("anime 2")
-        case 3:
-            springAnimation = springAnimations[3]
-            springView.animation = springAnimation.animation
-            springView.curve = springAnimation.curve
-            springView.force = springAnimation.force
-            springView.duration = springAnimation.duration
-            springView.delay = springAnimation.delay
-            springLabel.text =  """
-                                    animation: \(springAnimation.animation)
-                                    curve: \(springAnimation.curve)
-                                    force: \(springAnimation.force)
-                                    duracion: \(springAnimation.duration)
-                                    delay: \(springAnimation.delay)
-                                """
-            print("anime 3")
-        default:
-            print("ERROR: switch 1 doesn't work correct")
-        }
-        
-        switch counter {
-        case 0:
-            springButtonTitle = springAnimations[1]
-            runSpringAnimationButton.setTitle("Next is \(springButtonTitle.animation)", for: .normal)
-        case 1:
-            springButtonTitle = springAnimations[2]
-            runSpringAnimationButton.setTitle("Next is \(springButtonTitle.animation)", for: .normal)
-        case 2:
-            springButtonTitle = springAnimations[3]
-            runSpringAnimationButton.setTitle("Next is \(springButtonTitle.animation)", for: .normal)
-        case 3:
-            springButtonTitle = springAnimations[0]
-            runSpringAnimationButton.setTitle("Next is \(springButtonTitle.animation)", for: .normal)
-        default:
-            print("ERROR: switch 2 doesn't work correct")
-        }
-        
-        if counter >= 3 {
+        springAnimate()
+        setCounter(N: springAnimationNumber)
+        springSetTitle()
+        springView.animate()
+    }
+    
+    private func springAnimate() {
+        let animationValue = springAnimations[counter]
+        springView.animation = animationValue.animation
+        springView.curve = animationValue.curve
+        springView.force = animationValue.force
+        springView.duration = animationValue.duration
+        springView.delay = animationValue.delay
+        springLabel.text =  """
+                                animation: \(animationValue.animation)
+                                curve: \(animationValue.curve)
+                                force: \(animationValue.force)
+                                duracion: \(animationValue.duration)
+                                delay: \(animationValue.delay)
+                            """
+        print("anime \(counter)")
+    }
+    private func springSetTitle() {
+        let buttonTitle = springAnimations[counter]
+        runSpringAnimationButton.setTitle("Next is \(buttonTitle.animation)", for: .normal)
+    }
+    private func setCounter(N: Int) {
+        if counter >= N {
             counter = 0
         } else {
             counter += 1
         }
-        
-        springView.animate()
     }
 }
 
